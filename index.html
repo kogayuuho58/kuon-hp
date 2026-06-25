@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>株式会社久遠 | 「いい会社」を、世の中に増やす。</title>
+<meta name="description" content="株式会社久遠は「いい会社」を世の中に増やす会社です。マネジメントサービス『バクミエ』を中心に、組織の課題を見える化し、解決まで伴走します。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#0f2540;
+    --blue:#1e5a9f;
+    --blue-light:#589fef;
+    --ink:#1a2533;
+    --muted:#5b6b7d;
+    --line:#e6edf4;
+    --bg:#ffffff;
+    --bg-soft:#f5f9fd;
+    --radius:18px;
+    --maxw:980px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Noto Sans JP",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    font-size:16px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  a{color:inherit;text-decoration:none;}
+  .serif{font-family:"Noto Serif JP",serif;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.86);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:baseline;gap:8px;font-weight:700;letter-spacing:.04em;}
+  .brand .jp{font-size:20px;color:var(--navy);}
+  .brand .en{font-size:11px;color:var(--muted);letter-spacing:.22em;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{font-size:13px;color:var(--muted);transition:color .2s;}
+  .nav-links a:hover{color:var(--blue);}
+  .btn{
+    display:inline-block;background:var(--navy);color:#fff;
+    padding:11px 22px;border-radius:999px;font-size:13px;font-weight:500;
+    transition:transform .15s, background .2s;white-space:nowrap;
+  }
+  .btn:hover{background:var(--blue);transform:translateY(-1px);}
+  .nav .btn{padding:9px 18px;}
+  @media(max-width:768px){ .nav-links a:not(.btn){display:none;} }
+
+  /* Hero */
+  .hero{padding:96px 0 84px;background:
+      radial-gradient(900px 400px at 80% -10%, #eaf3fc 0%, rgba(234,243,252,0) 60%),
+      var(--bg);}
+  .hero .eyebrow{font-size:12px;letter-spacing:.24em;color:var(--blue);font-weight:500;margin-bottom:22px;}
+  .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.5;color:var(--navy);font-weight:600;margin-bottom:26px;}
+  .hero p{font-size:16px;color:var(--muted);max-width:620px;margin-bottom:36px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-ghost{background:#fff;color:var(--navy);border:1px solid var(--line);}
+  .btn-ghost:hover{background:var(--bg-soft);color:var(--blue);}
+
+  /* Section */
+  section{padding:84px 0;}
+  .sec-soft{background:var(--bg-soft);}
+  .label{font-size:12px;letter-spacing:.22em;color:var(--blue);font-weight:600;margin-bottom:14px;}
+  .sec-title{font-size:clamp(22px,3.4vw,30px);color:var(--navy);font-weight:600;margin-bottom:14px;line-height:1.45;}
+  .sec-lead{color:var(--muted);max-width:640px;margin-bottom:44px;}
+
+  /* Values */
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .value-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;}
+  .value-card .no{font-size:13px;color:var(--blue-light);font-weight:700;letter-spacing:.1em;}
+  .value-card h3{font-size:18px;color:var(--navy);margin:12px 0 8px;}
+  .vmv{display:grid;gap:18px;margin-bottom:44px;}
+  .vmv-row{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line);}
+  .vmv-row .k{font-size:13px;letter-spacing:.18em;color:var(--blue);font-weight:600;}
+  .vmv-row .v{font-size:clamp(17px,2.4vw,21px);color:var(--navy);}
+
+  /* Story */
+  .story p{color:var(--ink);margin-bottom:18px;max-width:720px;}
+  .story .em{color:var(--navy);font-weight:600;}
+
+  /* Members */
+  .members{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .member{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;}
+  .member-head{display:flex;align-items:center;gap:18px;margin-bottom:18px;}
+  .avatar{width:74px;height:74px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:26px;background:linear-gradient(135deg,var(--blue),var(--blue-light));}
+  .member-head h3{font-size:19px;color:var(--navy);}
+  .member-head .role{font-size:12.5px;color:var(--muted);margin-top:3px;}
+  .member .bio{font-size:14px;color:var(--muted);line-height:1.85;}
+  .member .lead-quote{font-size:14px;color:var(--blue);font-weight:500;margin-bottom:12px;}
+
+  /* Bakumie */
+  .bk{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;}
+  .bk h3{font-size:24px;color:var(--navy);margin-bottom:8px;}
+  .bk .tag{font-size:12px;color:var(--blue);letter-spacing:.1em;font-weight:600;margin-bottom:16px;}
+  .bk p{color:var(--muted);margin-bottom:18px;}
+  .bk-visual{background:linear-gradient(160deg,#eaf3fc,#f7fbff);border:1px solid var(--line);border-radius:var(--radius);
+    aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--blue);text-align:center;padding:24px;}
+  .bk-visual span{font-size:13px;color:var(--muted);}
+  .feat{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
+  .chip{font-size:12.5px;background:#fff;border:1px solid var(--line);color:var(--navy);padding:7px 14px;border-radius:999px;}
+
+  /* Plans */
+  .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;display:flex;gap:18px;align-items:flex-start;transition:border-color .2s, transform .15s;}
+  .plan:hover{border-color:var(--blue-light);transform:translateY(-2px);}
+  .plan .pn{font-size:22px;font-weight:700;color:var(--blue-light);line-height:1;flex:none;}
+  .plan h4{font-size:16px;color:var(--navy);}
+
+  /* Pricing */
+  .price-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:8px 34px;max-width:620px;}
+  .price-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);}
+  .price-row:last-child{border-bottom:none;}
+  .price-row .name{color:var(--ink);font-size:15px;}
+  .price-row .val{color:var(--navy);font-weight:700;font-size:17px;white-space:nowrap;}
+  .price-row .val small{font-weight:500;font-size:12px;color:var(--muted);}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .ai-note{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:22px;}
+  .ai-dot{width:34px;height:34px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--blue),var(--blue-light));display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;}
+  .ai-note p{font-size:13px;color:var(--muted);line-height:1.7;}
+  form{display:grid;gap:14px;}
+  label{font-size:13px;color:var(--navy);font-weight:500;}
+  input,textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#fff;transition:border-color .2s;}
+  input:focus,textarea:focus{outline:none;border-color:var(--blue-light);}
+  form .btn{justify-self:start;border:none;cursor:pointer;margin-top:6px;}
+  .contact-info{background:var(--bg-soft);border-radius:var(--radius);padding:30px;}
+  .contact-info h4{color:var(--navy);font-size:16px;margin-bottom:14px;}
+  .contact-info a{color:var(--blue);font-weight:500;}
+  .contact-info .row{margin-bottom:12px;font-size:14px;color:var(--muted);}
+
+  /* Footer */
+  footer{padding:50px 0;border-top:1px solid var(--line);}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+  .foot .c{font-size:12px;color:var(--muted);}
+  .foot .brand .jp{font-size:17px;}
+
+  @media(max-width:768px){
+    section{padding:60px 0;}
+    .hero{padding:64px 0 56px;}
+    .values,.members,.plans,.contact-grid,.bk{grid-template-columns:1fr;}
+    .vmv-row{grid-template-columns:1fr;gap:6px;}
+    .price-card{padding:8px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="jp">久遠</span><span class="en">KUON</span></a>
+    <nav class="nav-links">
+      <a href="#philosophy">理念</a>
+      <a href="#story">私たちについて</a>
+      <a href="#members">メンバー</a>
+      <a href="#bakumie">バクミエ</a>
+      <a href="#pricing">料金</a>
+      <a href="#contact" class="btn">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">株式会社久遠 ／ KUON Inc.</div>
+    <h1 class="serif">「いい会社」を、<br>世の中に増やす。</h1>
+    <p>顧客と会うのが楽しみになる会社が、世の中に溢れる社会へ。<br>私たち久遠は、その実例であり、つくり方を伝えていく会社です。</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn">お問い合わせ</a>
+      <a href="#bakumie" class="btn btn-ghost">サービスを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="wrap">
+    <div class="label">PHILOSOPHY</div>
+    <h2 class="sec-title">企業理念</h2>
+    <div class="vmv">
+      <div class="vmv-row"><div class="k">VISION</div><div class="v serif">顧客と会うのが楽しみになる会社が、世の中に溢れる社会。</div></div>
+      <div class="vmv-row"><div class="k">MISSION</div><div class="v serif">「いい会社」を、世の中に増やす。</div></div>
+    </div>
+    <div class="label">VALUES</div>
+    <div class="values">
+      <div class="value-card"><div class="no">01</div><h3>自分を疑う。</h3></div>
+      <div class="value-card"><div class="no">02</div><h3>約束を守る。</h3></div>
+      <div class="value-card"><div class="no">03</div><h3>高い基準で仕事をする。</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="sec-soft">
+  <div class="wrap story">
+    <div class="label">OUR STORY</div>
+    <h2 class="sec-title">久遠をつくった理由</h2>
+    <p>これまで働いてきた会社で、いつも経営陣と従業員の衝突やトラブルがありました。退職者が続く場面を、目の当たりにすることが多かったです。仲良かった先輩や、よく飲みに行っていた後輩が、次の月にはいなくなる。それが普通に続く時期がありました。</p>
+    <p class="em">今思い返すと、その時から「いつか人がやめない会社を、自分たちの手でつくってみせる」と思っていました。</p>
+    <p>それを、自社に留めず世の中へ提供したい。久遠は、「いい会社」の実例であり、同時に「いい会社のつくり方」を世の中に伝えていく会社でありたい。その想いが根本にあって、会社をつくりました。</p>
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members">
+  <div class="wrap">
+    <div class="label">MEMBERS</div>
+    <h2 class="sec-title">メンバー紹介</h2>
+    <div class="members">
+      <div class="member">
+        <div class="member-head">
+          <div class="avatar">古</div>
+          <div>
+            <h3>古賀 勇帆</h3>
+            <div class="role">Yuuho Koga ／ 代表取締役</div>
+          </div>
+        </div>
+        <p class="bio">新卒でタイムズ24に営業職として入社。スタートアップ・ベンチャーで営業マネージャー、事業責任者を務め独立。企業の営業組織マネジメントや経営企画業務を請け負う中で組織マネジメントの課題に多くぶつかり、マネジメントSaaS「バクミエ」を開発。サービスの外販に伴い、2026年4月に株式会社久遠を起業。</p>
+      </div>
+      <div class="member">
+        <div class="member-head">
+          <div class="avatar">樹</div>
+          <div>
+            <h3>橋本 樹里</h3>
+            <div class="role">Jyuri Hashimoto ／ バクミエ事業部 カスタマーサクセスマネージャー</div>
+          </div>
+        </div>
+        <p class="lead-quote">「アイデアを形にする」お手伝いをします。お気軽にご相談ください。</p>
+        <p class="bio">生命保険営業、SaaS営業などを経験する中で、多くの企業が「現場の状況が見えない」「社員の変化に気づけない」といった課題を抱えていることを実感。現在は久遠にて組織マネジメント支援サービス「バクミエ」のカスタマーサクセスマネージャーを担当し、現場と経営の距離を縮め、誰もが安心して働ける組織づくりを支援しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAKUMIE -->
+<section id="bakumie" class="sec-soft">
+  <div class="wrap">
+    <div class="label">OUR SERVICE</div>
+    <div class="bk">
+      <div>
+        <div class="tag">マネジメントサービス</div>
+        <h3>バクミエ / Bakumie</h3>
+        <p>社員が毎日書く「日報」をもとに、AIがチームの様子や、やる気が下がっている人・困っている人のサインを早めに見つけてお知らせ。問題が大きくなる前に、上司やリーダーが先手で対策を打てます。さらに、見つけた課題を解決するプランまでご用意しているのが特徴です。</p>
+        <div class="feat">
+          <span class="chip">日報で見える化</span>
+          <span class="chip">AIが離職サインを検知</span>
+          <span class="chip">評価制度との連動</span>
+          <span class="chip">ダッシュボード分析</span>
+        </div>
+        <a href="https://bakumie.jp/" target="_blank" rel="noopener" class="btn">サービスサイトを見る →</a>
+      </div>
+      <div class="bk-visual">
+        <span>日報 × AIで、<br>組織の変化を見える化。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans">
+  <div class="wrap">
+    <div class="label">SOLUTION</div>
+    <h2 class="sec-title">改善提案プラン</h2>
+    <p class="sec-lead">日報のデータをもとに課題を見える化するだけでなく、実際に解決するプランをご提案します。</p>
+    <div class="plans">
+      <div class="plan"><div class="pn">01</div><h4>マネジメント研修</h4></div>
+      <div class="plan"><div class="pn">02</div><h4>評価制度の作成・運用</h4></div>
+      <div class="plan"><div class="pn">03</div><h4>AIエージェント導入・業務改善</h4></div>
+      <div class="plan"><div class="pn">04</div><h4>マネージャー代行・営業代行・採用代行</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="sec-soft">
+  <div class="wrap">
+    <div class="label">PRICING</div>
+    <h2 class="sec-title">料金</h2>
+    <div class="price-card">
+      <div class="price-row"><span class="name">初期費用</span><span class="val">200,000<small> 円</small></span></div>
+      <div class="price-row"><span class="name">1アカウント</span><span class="val">1,000<small> 円 / 月</small></span></div>
+      <div class="price-row"><span class="name">貴社オリジナルのAI業務アプリ開発</span><span class="val">要相談</span></div>
+      <div class="price-row"><span class="name">改善提案プラン</span><span class="val">要相談</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="label">CONTACT</div>
+    <h2 class="sec-title">お問い合わせ</h2>
+    <p class="sec-lead">お仕事のご相談やご質問など、お気軽にご連絡ください。</p>
+    <div class="contact-grid">
+      <div>
+        <div class="ai-note">
+          <div class="ai-dot">AI</div>
+          <p>いただいたお問い合わせには、AIが内容を確認のうえ、<b>数営業日以内に古賀よりお返事</b>いたします。</p>
+        </div>
+        <!-- TODO: action にFormspreeのエンドポイントURLを設定すると送信が有効化されます -->
+        <form action="#" method="POST" onsubmit="alert('送信機能は公開前に有効化します（Formspree連携予定）');return false;">
+          <div>
+            <label for="name">お名前 / 会社名</label>
+            <input id="name" name="name" type="text" placeholder="例）株式会社サンプル 山田太郎" required />
+          </div>
+          <div>
+            <label for="email">メールアドレス</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message" rows="5" placeholder="ご相談内容をご記入ください" required></textarea>
+          </div>
+          <button type="submit" class="btn">送信する</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h4>株式会社久遠</h4>
+        <div class="row">担当：古賀</div>
+        <div class="row">✉️ <a href="mailto:y.koga@bakumie.co.jp">y.koga@bakumie.co.jp</a></div>
+        <div class="row">フォームが使えない場合は、上記メールへ直接ご連絡ください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="brand"><span class="jp">久遠</span><span class="en">KUON Inc.</span></a>
+    <span class="c">© 2026 株式会社久遠. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
